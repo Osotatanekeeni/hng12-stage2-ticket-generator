@@ -17,6 +17,7 @@ function App() {
   return (
     
       <main className="flex h-screen items-center justify-center" style={{ backgroundImage: `url(${BackgroundColorImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+        
       {step === 1 ? <TicketSelection /> : step === 2 ? <AttendeeDetails /> : step === 3 ? <TicketBooked /> : <TicketSelection />}
     </main>
     

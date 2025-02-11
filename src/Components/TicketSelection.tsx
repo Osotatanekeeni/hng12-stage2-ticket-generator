@@ -57,15 +57,20 @@ function TicketSelection() {
     if (isRegularTicket) {
         setNumberOfRegularTickets(selectedTicketCount);
         setTotalRegularTickets(totalRegularTickets - selectedTicketCount)
+        localStorage.setItem("ticketType", "REGULAR")
     };
     if (isVipTicket) {
         setNumberOfVipTickets(selectedTicketCount);
         setTotalVipTickets(totalVipTickets - selectedTicketCount)
+        localStorage.setItem("ticketType", "VIP")
     };
     if (isVvipTicket) {
         setNumberOfVvipTickets(selectedTicketCount);
         setTotalVvipTickets(totalVvipTickets - selectedTicketCount)
+        localStorage.setItem("ticketType", "VVIP")
     };
+
+    localStorage.setItem("ticketCount", selectedTicketCount.toString());
 
     setCurrentStep(2);
   };
@@ -81,7 +86,7 @@ function TicketSelection() {
           <p>Step 1/3</p>
         </div>
         <div className="relative mt-4">
-          <div className="absolute left-0 top-0 h-1 w-2/4 rounded-full bg-teal"></div>
+          <div className="absolute left-0 top-0 h-1 w-1/3 rounded-full bg-teal"></div>
           <div className="h-1 w-full rounded-full bg-borderColor"></div>
         </div>
       </div>
