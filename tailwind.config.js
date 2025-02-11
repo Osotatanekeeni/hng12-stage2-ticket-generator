@@ -13,11 +13,11 @@ export default {
         container2: "#052228",
         accessColor: "#197686",
         strokeColor: "#2BA4B9",
-        container3: "#052930"
+        container3: "#052930",
 
       },
       backgroundImage: {
-        'background-gradient': 'linear-gradient(to bottom, #02191D, white), radial-gradient(circle at bottom, #24A085 20%, #24A085 0%)',
+        'background-gradient': "radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), #02191D;"
       },
     },
   },

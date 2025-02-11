@@ -3,6 +3,8 @@ import React, { useContext } from 'react'
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import { TicketifyContext } from '../Context';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import TicketBooked from './TicketBooked';
+// import TicketSelection from './TicketSelection';
 
 interface FormInputs {
     attendeeName: string;
@@ -11,7 +13,7 @@ interface FormInputs {
 }
 
 function AttendeeDetails() {
-    const { imageUrl, setImageUrl, setAttendeeName, setAttendeeEmail, setAbout } = useContext(TicketifyContext);
+    const { imageUrl, setImageUrl, setAttendeeName, setAttendeeEmail, setAbout, currentStep, setCurrentStep } = useContext(TicketifyContext);
     const { register, handleSubmit, formState: { errors } } = useForm<FormInputs>();
 
     const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,7 +28,18 @@ function AttendeeDetails() {
         setAttendeeName(data.attendeeName);
         setAttendeeEmail(data.attendeeEmail);
         setAbout(data.about);
+        setCurrentStep(3);
     }
+
+    const handlePrevious = () => {
+        setCurrentStep(2)
+    }
+
+    if (currentStep === 3) {
+        console.log("This is the current step: ", currentStep);
+        return <TicketBooked />
+    } 
+
     return (
         <div className='flex w-2/5 flex-col gap-10 overflow-y-auto rounded-3xl border  border-borderColor p-12 text-white' style={{ height: "90vh"}}>
             <div>
@@ -45,8 +58,11 @@ function AttendeeDetails() {
                 <p className='mb-8'>Upload Profile Photo</p>
                 <div className='flex justify-center rounded-xl bg-container3'>
                     <div className='relative flex w-1/3 flex-col items-center rounded-3xl bg-borderColor px-6 py-16 text-center'>
+                    {!imageUrl ? 
+                    (<>
                     <AiOutlineCloudDownload size={32} />
-                        <p className='text-sm font-light' style={{ fontFamily: "Roboto"}}>Drag & drop or click to upload</p>
+                    <p className='text-sm font-light' style={{ fontFamily: "Roboto"}}>Drag & drop or click to upload</p></>) : 
+                    <img src={imageUrl} />}
                         <input
                             type="file"
                             accept="image/*"
@@ -107,7 +123,7 @@ function AttendeeDetails() {
             </div>
 
             <div className='mt-8 flex gap-4'>
-                    <button type="button" className='px-22 w-1/2 rounded-xl border border-teal py-3 text-teal'>Back</button>
+                    <button type="button" className='px-22 w-1/2 rounded-xl border border-teal py-3 text-teal' onClick={handlePrevious}>Back</button>
                     <button type="submit" className='px-22 w-1/2 rounded-xl bg-teal py-3'>Get My Free Ticket</button>
             </div>
             </form>
