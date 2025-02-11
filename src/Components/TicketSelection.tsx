@@ -2,12 +2,14 @@ import React, { useContext, useState } from 'react'
 import SectionColorImage from "../assets/Images/SectionColorImage.svg";
 import { TicketifyContext } from '../Context';
 import '../index.css';
+import AttendeeDetails from './AttendeeDetails';
 function TicketSelection() {
     const { numberOfRegularTickets, setNumberOfRegularTickets, numberOfVipTickets, setNumberOfVipTickets, numberOfVvipTickets, setNumberOfVvipTickets} = useContext(TicketifyContext);
     const [isRegularTicket, setIsRegularTicket] = useState(true);
     const [isVipTicket, setIsVipTicket] = useState(false);
     const [isVvipTicket, setIsVvipTicket] = useState(false);
     const [selectedTicketCount, setSelectedTicketCount] = useState(1);
+    const [currentStep, setCurrentStep] = useState(1);
 
     const handleRegularTicket = () => {
         setIsRegularTicket(true);
@@ -38,6 +40,18 @@ function TicketSelection() {
             maxTickets = numberOfVvipTickets;
         }
         return Array.from({ length: maxTickets }, (_, i) => i + 1);
+    }
+
+    const handlePrevious = () => {
+        setCurrentStep(currentStep - 1);
+    }
+
+    const handleNext = () => {
+        setCurrentStep(2)
+    }
+
+    if (currentStep === 2) {
+        return <AttendeeDetails />
     }
   return (
     <div className='flex w-2/5 flex-col gap-10 rounded-3xl border  border-borderColor p-12 text-white'>
@@ -79,7 +93,7 @@ function TicketSelection() {
                         <p className='whitespace-nowrap'>REGULAR ACCESS</p>
                         <p className='text-sm font-light'>{numberOfRegularTickets} left!</p>
                     </div>
-                    <div className='flex w-auto items-center rounded-lg border border-strokeColor bg-borderColor p-2 pl-8  text-right font-semibold' >
+                    <div className='flex h-3/4 w-auto items-center rounded-lg border border-strokeColor bg-borderColor p-2 pl-8  text-right font-semibold' >
                         <p>Free</p>
                     </div>
                 </div>
@@ -93,7 +107,7 @@ function TicketSelection() {
                         <p className='whitespace-nowrap'>VIP ACCESS</p>
                         <p className='text-sm font-light'>{numberOfVipTickets} left!</p>
                     </div>
-                    <div className='flex w-auto items-center rounded-lg border border-strokeColor bg-borderColor p-2 pl-8   text-right font-semibold' >
+                    <div className='flex h-3/4 w-auto items-center rounded-lg border border-strokeColor bg-borderColor p-2 pl-8   text-right font-semibold' >
                         <p>$50</p>
                     </div>
                 </div>
@@ -104,7 +118,7 @@ function TicketSelection() {
                         <p className='whitespace-nowrap'>VVIP ACCESS</p>
                         <p className='text-sm font-light'>{numberOfVvipTickets} left!</p>
                     </div>
-                    <div className='flex w-auto items-center rounded-lg border border-strokeColor bg-borderColor p-2 pl-8  text-right font-semibold' >
+                    <div className='flex h-3/4 w-auto items-center rounded-lg border border-strokeColor bg-borderColor p-2 pl-8  text-right font-semibold' >
                         <p>$150</p>
                     </div>
                 </div>
@@ -123,7 +137,7 @@ function TicketSelection() {
 
             <div className='mt-8 flex gap-8 rounded-3xl border border-borderColor2 px-12'>
                     <button className='px-22.5 w-1/2 rounded-xl border border-teal py-3 text-teal'>Cancel</button>
-                    <button className='px-22.5 w-1/2 rounded-xl bg-teal py-3'>Next</button>
+                    <button className='px-22.5 w-1/2 rounded-xl bg-teal py-3' onClick={handleNext}>Next</button>
             </div>
         </div>
     </div>

@@ -12,7 +12,8 @@ export default {
         container: "#08252B",
         container2: "#052228",
         accessColor: "#197686",
-        strokeColor: "#2BA4B9"
+        strokeColor: "#2BA4B9",
+        container3: "#052930"
 
       },
       backgroundImage: {
