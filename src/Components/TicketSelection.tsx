@@ -1,5 +1,5 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import SectionColorImage from "../assets/Images/SectionColorImage.svg";
 import { TicketifyContext } from "../Context";
 import "../index.css";
@@ -186,12 +186,12 @@ function TicketSelection() {
         </div>
 
         <div className="mt-8 inline-flex h-12 items-end justify-end gap-6">
-          <div className="flex h-12 shrink grow basis-0 items-center justify-center gap-2 overflow-hidden rounded-lg border border-[#23a0b5] px-6 py-3 cursor-pointer">
+          <div className="flex h-12 shrink grow basis-0 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg border border-[#23a0b5] px-6 py-3">
             <button className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-[#23a0b5]">
               Cancel
             </button>
           </div>
-          <div className="flex h-12 shrink grow basis-0 items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#23a0b5] px-6 py-3 cursor-pointer" onClick={handleNext}>
+          <div className="flex h-12 shrink grow basis-0 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#23a0b5] px-6 py-3" onClick={handleNext}>
             <button
               className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-white"
               onClick={handleNext}

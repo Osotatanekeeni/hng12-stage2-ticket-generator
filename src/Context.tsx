@@ -13,8 +13,8 @@ interface TicketifyContextProps {
   setAttendeeName: (name: string) => void;
   attendeeEmail: string;
   setAttendeeEmail: (email: string) => void;
-  about: string;
-  setAbout: (about: string) => void;
+  request: string;
+  setRequest: (about: string) => void;
   currentStep: number;
   setCurrentStep: (step: number) => void;
   totalRegularTickets: number;
@@ -38,8 +38,8 @@ export const TicketifyContext = createContext<TicketifyContextProps>({
   setAttendeeName: () => {},
   attendeeEmail: "",
   setAttendeeEmail: () => {},
-  about: "",
-  setAbout: () => {},
+  request: "",
+  setRequest: () => {},
   currentStep: 1,
   setCurrentStep: () => {},
   totalRegularTickets: 20,
@@ -59,52 +59,52 @@ export const TicketifyProvider = ({ children }: { children: ReactNode }) => {
     const [imageUrl, setImageUrl] = useState("");
     const [attendeeName, setAttendeeName] = useState("");
     const [attendeeEmail, setAttendeeEmail] = useState("");
-    const [about, setAbout] = useState("");
+    const [request, setRequest] = useState("");
     const [currentStep, setCurrentStep] = useState(1);
     const [totalRegularTickets, setTotalRegularTickets] = useState(20);
     const [totalVipTickets, setTotalVipTickets] = useState(20);
     const [totalVvipTickets, setTotalVvipTickets] = useState(20);
 
 
-    useEffect(() => {
-        localStorage.setItem('imageUrl', imageUrl);
-      }, [imageUrl]);
+    // useEffect(() => {
+    //     localStorage.setItem('imageUrl', imageUrl);
+    //   }, [imageUrl]);
     
-      useEffect(() => {
-        localStorage.setItem('attendeeName', attendeeName);
-      }, [attendeeName]);
+      // useEffect(() => {
+      //   localStorage.setItem('attendeeName', attendeeName);
+      // }, [attendeeName]);
     
-      useEffect(() => {
-        localStorage.setItem('attendeeEmail', attendeeEmail);
-      }, [attendeeEmail]);
+      // useEffect(() => {
+      //   localStorage.setItem('attendeeEmail', attendeeEmail);
+      // }, [attendeeEmail]);
     
-      useEffect(() => {
-        localStorage.setItem('about', about);
-      }, [about]);
+      // useEffect(() => {
+      //   localStorage.setItem('request', request);
+      // }, [request]);
     
-      useEffect(() => {
-        localStorage.setItem('currentStep', currentStep.toString());
-      }, [currentStep]);
+      // useEffect(() => {
+      //   localStorage.setItem('currentStep', currentStep.toString());
+      // }, [currentStep]);
 
-      useEffect(() => {
-        localStorage.setItem('totalRegularTickets', totalRegularTickets.toString());
-      }, [totalRegularTickets]);
+      // useEffect(() => {
+      //   localStorage.setItem('totalRegularTickets', totalRegularTickets.toString());
+      // }, [totalRegularTickets]);
 
-      useEffect(() => {
-        localStorage.setItem('totalVipTickets', totalVipTickets.toString());
-      }, [totalVipTickets]);
+      // useEffect(() => {
+      //   localStorage.setItem('totalVipTickets', totalVipTickets.toString());
+      // }, [totalVipTickets]);
 
-      useEffect(() => {
-        localStorage.setItem('totalVvipTickets', totalVvipTickets.toString());
-      }, [totalVvipTickets]);
+      // useEffect(() => {
+      //   localStorage.setItem('totalVvipTickets', totalVvipTickets.toString());
+      // }, [totalVvipTickets]);
 
-      useEffect(() => {
-        localStorage.setItem('numberOfRegularTickets', numberOfRegularTickets.toString());
-      }, [numberOfRegularTickets]);
+      // useEffect(() => {
+      //   localStorage.setItem('numberOfRegularTickets', numberOfRegularTickets.toString());
+      // }, [numberOfRegularTickets]);
 
-      useEffect(() => {
-        localStorage.setItem('numberOfVipTickets', numberOfVipTickets.toString());
-      }, [numberOfVipTickets]);
+      // useEffect(() => {
+      //   localStorage.setItem('numberOfVipTickets', numberOfVipTickets.toString());
+      // }, [numberOfVipTickets]);
 
   return (
     <TicketifyContext.Provider value={{ 
@@ -120,8 +120,8 @@ export const TicketifyProvider = ({ children }: { children: ReactNode }) => {
         setAttendeeName,
         attendeeEmail,
         setAttendeeEmail,
-        about,
-        setAbout,
+        request,
+        setRequest,
         currentStep,
         setCurrentStep,
         totalRegularTickets,
