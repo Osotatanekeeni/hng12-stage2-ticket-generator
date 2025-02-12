@@ -90,10 +90,11 @@ function AttendeeDetails() {
         <div className="text-center font-['Roboto'] text-base font-normal leading-normal text-neutral-50">
           Upload Profile Photo
         </div>
+        {!image ? (
         <div className="inline-flex h-[200px] items-center justify-center gap-2.5 self-stretch bg-black/20">
           <div className="relative inline-flex size-60 flex-col items-center justify-center gap-4 rounded-[32px] border-4 border-[#23a0b5]/50 bg-[#0e464e] p-6">
-            {!image ? (
-              <>
+            
+            
                 <div data-svg-wrapper className="relative">
                   <svg
                     width="32"
@@ -115,18 +116,66 @@ function AttendeeDetails() {
                 <div className="self-stretch text-center font-['Roboto'] text-base font-normal leading-normal text-neutral-50">
                   Drag & drop or click to upload
                 </div>
-              </>
+                </div>
+          
+          </div>
             ) : (
-              <img className="size-60" src={imageUrl} />
-            )}
-            <input
+                <>
+                <div className="inline-flex h-[200px] items-center   justify-center gap-2.5 self-stretch bg-black/20">
+                <div class=" relative w-60 h-60 border z-20 p-6 bg-black/50 rounded-[32px] flex-col justify-center items-center gap-4 inline-flex" style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+            
+            
+                <div data-svg-wrapper className="relative z-1 ">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.2639 14.816C24.6812 10.2267 20.7505 6.66669 16.0052 6.66669C12.3305 6.66669 9.13854 8.81469 7.68121 12.2C4.81721 13.056 2.67188 15.76 2.67188 18.6667C2.67188 22.3427 5.66254 25.3334 9.33854 25.3334H10.6719V22.6667H9.33854C7.13321 22.6667 5.33854 20.872 5.33854 18.6667C5.33854 16.7947 6.93721 14.9907 8.90254 14.6454L9.67721 14.5094L9.93321 13.7654C10.8705 11.0307 13.1972 9.33335 16.0052 9.33335C19.6812 9.33335 22.6719 12.324 22.6719 16V17.3334H24.0052C25.4759 17.3334 26.6719 18.5294 26.6719 20C26.6719 21.4707 25.4759 22.6667 24.0052 22.6667H21.3385V25.3334H24.0052C26.9465 25.3334 29.3385 22.9414 29.3385 20C29.337 18.8047 28.9347 17.6444 28.196 16.7047C27.4574 15.7649 26.425 15.0999 25.2639 14.816Z"
+                      fill="#FAFAFA"
+                    />
+                    <path
+                      d="M17.3385 18.6667V13.3334H14.6719V18.6667H10.6719L16.0052 25.3334L21.3385 18.6667H17.3385Z"
+                      fill="#FAFAFA"
+                    />
+                  </svg>
+                  
+                </div>
+                <div className="relative self-stretch z-1 text-center  font-['Roboto'] text-base font-normal leading-normal text-neutral-50">
+                  Drag & drop or click to upload
+                  
+                </div>
+                
+              <div className="absolute border rounded-[32px] h-full w-full">
+              {/* <img className="rounded-[32px] h-full w-full" src={imageUrl}></img> */}
+              <input
+              type="file"
+              accept="image/*"
+              className="relative h-full inset-0 cursor-pointer opacity-0"
+              onChange={handleImageUpload} />
+              </div>
+                </div>
+                
+               
+                {/* <div className="border-8 size-60 relative">
+                <input
               type="file"
               accept="image/*"
               className="absolute inset-0 cursor-pointer opacity-0"
               onChange={handleImageUpload}
-            />
+                
+            /></div> */}
           </div>
-        </div>
+            
+            </>
+              
+            )}
+            
+            
+          
       </div>
 
       <div className="relative mt-4">

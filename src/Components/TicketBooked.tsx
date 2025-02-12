@@ -99,11 +99,6 @@ function TicketBooked() {
                         </div>
                     </div>
                 </div>
-                {/* <div className="absolute border mt-8">
-                    <p>
-                        Where does this one go?
-                    </p>
-                </div> */}
                 <div className="absolute bottom-14 h-[68px] w-[236px]">
                     <div className="absolute left-[1.10px] top-[55.22px] h-[7.67px] w-[6.59px] font-['Inter'] text-xs font-normal text-white">1</div>
                     <div className="absolute -top-0 left-[27.44px] h-[68px] w-[6.59px]">

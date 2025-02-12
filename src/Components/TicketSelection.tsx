@@ -79,10 +79,10 @@ function TicketSelection() {
     return <AttendeeDetails />;
   }
   return (
-    <div className="flex w-2/5 flex-col gap-10 rounded-3xl border  border-borderColor p-12 text-white">
+    <div className="flex w-full lg:w-2/5 flex-col gap-10 rounded-3xl border  border-borderColor p-4 sm:p-12 text-white">
       <div>
-        <div className="flex justify-between">
-          <p className="step-heading text-4xl font-light">Ticket Selection</p>
+        <div className="flex flex-col sm:flex-row justify-between">
+          <p className="step-heading text-3xl sm:text-4xl font-light">Ticket Selection</p>
           <p>Step 1/3</p>
         </div>
         <div className="relative mt-4">
@@ -100,16 +100,16 @@ function TicketSelection() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <h1 className="text-5xl" style={{ fontFamily: "Road Rage" }}>
+          <h1 className="text-4xl sm:text-5xl" style={{ fontFamily: "Road Rage" }}>
             Techember Fest "25
           </h1>
-          <p className="w-5/6" style={{ fontFamily: "Roboto" }}>
+          <p className="sm:w-5/6" style={{ fontFamily: "Roboto" }}>
             Join us for an unforgottable experience at Techember Fest! Secure
             your spot now
           </p>
-          <div className="flex gap-6" style={{ fontFamily: "Roboto" }}>
-            <p>📍Silicon Delta</p>
-            <p className="tracking-widest">| |</p>
+          <div className="flex flex-col mt-5 sm:mt-0 sm:flex-row gap-0 sm:gap-6" style={{ fontFamily: "Roboto" }}>
+            <p>📍04 Rumens road, Ikoyi, Lagos</p>
+            <p className="tracking-widest hidden sm:block">| |</p>
             <p>March 15, 2025 | 7:00PM</p>
           </div>
         </div>
@@ -122,10 +122,10 @@ function TicketSelection() {
         <div className="mb-2 mt-8 font-['Roboto'] text-base font-normal leading-normal text-neutral-50">
           Select Ticket Type:
         </div>
-        <div className="inline-flex h-[142px] flex-col items-center justify-center gap-4 rounded-3xl border border-[#07363e] bg-[#042127] p-4">
-          <div className="inline-flex items-start justify-between self-stretch">
+        <div className="inline-flex flex-col items-center justify-center gap-4 rounded-3xl border border-[#07363e] bg-[#042127] p-4">
+          <div className="inline-flex items-start flex-col sm:flex-row gap-6 justify-between self-stretch">
             <div
-              className={`inline-flex h-[110px] w-[158px] flex-col items-start justify-start gap-3 overflow-hidden rounded-xl border-2 border-accessColor ${isRegularTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
+              className={`inline-flex h-[110px] w-full flex-col  items-start justify-start gap-1 overflow-hidden rounded-xl hover:bg-[#2b545a] border-2 border-accessColor ${isRegularTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
               onClick={handleRegularTicket}
             >
               <div className="font-['Roboto'] text-2xl font-semibold leading-relaxed text-white">
@@ -141,7 +141,7 @@ function TicketSelection() {
               </div>
             </div>
             <div
-              className={`inline-flex h-[110px] w-[158px] flex-col items-start justify-start gap-3 overflow-hidden rounded-xl border-2 border-accessColor ${isVipTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
+              className={`inline-flex h-[110px] w-full flex-col  items-start justify-start gap-1 overflow-hidden rounded-xl hover:bg-[#2b545a] border-2 border-accessColor ${isVipTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
               onClick={handleVipTicket}
             >
               <div className="font-['Roboto'] text-2xl font-semibold leading-relaxed text-white">
@@ -157,7 +157,7 @@ function TicketSelection() {
               </div>
             </div>
             <div
-              className={`inline-flex h-[110px] w-[158px] flex-col items-start justify-start gap-3 overflow-hidden rounded-xl border-2 border-accessColor ${isVvipTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
+              className={`inline-flex h-[110px] w-full flex-col items-start justify-start gap-1 overflow-hidden rounded-xl hover:bg-[#2b545a] border-2 border-accessColor ${isVvipTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
               onClick={handleVvipTicket}
             >
               <div className="font-['Roboto'] text-2xl font-semibold leading-relaxed text-white">
@@ -190,13 +190,13 @@ function TicketSelection() {
           </select>
         </div>
 
-        <div className="mt-8 inline-flex h-12 items-end justify-end gap-6">
-          <div className="flex h-12 shrink grow basis-0 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg border border-[#23a0b5] px-6 py-3">
+        <div className="mt-8 inline-flex flex-col-reverse sm:flex-row h-auto items-end justify-end gap-3 sm:gap-6">
+          <div className="flex h-12 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg border border-[#23a0b5] px-6 py-3">
             <button className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-[#23a0b5]">
               Cancel
             </button>
           </div>
-          <div className="flex h-12 shrink grow basis-0 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#23a0b5] px-6 py-3" onClick={handleNext}>
+          <div className="flex h-12 w-full  cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#23a0b5] px-6 py-3" onClick={handleNext}>
             <button
               className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-white"
               onClick={handleNext}
