@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Logo from "../assets/Images/LogoWithText.svg"
 import { BsArrowRight } from 'react-icons/bs'
 import { Link, useLocation } from 'react-router-dom'
@@ -13,7 +13,7 @@ export default function Navigation() {
    
   return (
     <div className=' flex w-full justify-center p-2 font-[JejuMyeongjo]'>
-        <div className='flex rounded-2xl border border-accessColor p-2 w-full sm:w-3/4'>
+        <div className='flex w-full rounded-2xl border border-accessColor p-2 sm:w-3/4'>
         <div className=' w-full'>
             <img src={Logo} />
         </div>

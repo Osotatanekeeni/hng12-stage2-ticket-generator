@@ -26,7 +26,7 @@ function App() {
     <Router>
     <main className="" style={{ backgroundImage: `url(${BackgroundColorImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
       <Navigation />
-      <div className="flex sm:h-screen items-center justify-center pt-10 px-4 sm:pt-0">
+      <div className="flex items-center justify-center px-4 pt-10 sm:h-screen sm:pt-0">
         <Routes>
           <Route path="/" element={renderContent()} />
           <Route path="/tickets" element={renderContent()} />

@@ -1,4 +1,4 @@
-import React, { createContext, useState, ReactNode, useEffect } from 'react';
+import { createContext, useState, ReactNode } from 'react';
 
 interface TicketifyContextProps {
   numberOfRegularTickets: number;
@@ -64,47 +64,6 @@ export const TicketifyProvider = ({ children }: { children: ReactNode }) => {
     const [totalRegularTickets, setTotalRegularTickets] = useState(20);
     const [totalVipTickets, setTotalVipTickets] = useState(20);
     const [totalVvipTickets, setTotalVvipTickets] = useState(20);
-
-
-    // useEffect(() => {
-    //     localStorage.setItem('imageUrl', imageUrl);
-    //   }, [imageUrl]);
-    
-      // useEffect(() => {
-      //   localStorage.setItem('attendeeName', attendeeName);
-      // }, [attendeeName]);
-    
-      // useEffect(() => {
-      //   localStorage.setItem('attendeeEmail', attendeeEmail);
-      // }, [attendeeEmail]);
-    
-      // useEffect(() => {
-      //   localStorage.setItem('request', request);
-      // }, [request]);
-    
-      // useEffect(() => {
-      //   localStorage.setItem('currentStep', currentStep.toString());
-      // }, [currentStep]);
-
-      // useEffect(() => {
-      //   localStorage.setItem('totalRegularTickets', totalRegularTickets.toString());
-      // }, [totalRegularTickets]);
-
-      // useEffect(() => {
-      //   localStorage.setItem('totalVipTickets', totalVipTickets.toString());
-      // }, [totalVipTickets]);
-
-      // useEffect(() => {
-      //   localStorage.setItem('totalVvipTickets', totalVvipTickets.toString());
-      // }, [totalVvipTickets]);
-
-      // useEffect(() => {
-      //   localStorage.setItem('numberOfRegularTickets', numberOfRegularTickets.toString());
-      // }, [numberOfRegularTickets]);
-
-      // useEffect(() => {
-      //   localStorage.setItem('numberOfVipTickets', numberOfVipTickets.toString());
-      // }, [numberOfVipTickets]);
 
   return (
     <TicketifyContext.Provider value={{ 

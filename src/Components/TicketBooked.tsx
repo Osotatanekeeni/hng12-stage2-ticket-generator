@@ -42,7 +42,7 @@ function TicketBooked() {
             <div className="self-stretch text-center"><span className="font-['Roboto'] text-base font-normal leading-normal text-neutral-50">Check your email for a copy or you can </span><span className="font-['Roboto'] text-base font-bold leading-normal text-neutral-50">download</span></div>
         </div>
         <div id="ticket" className="flex h-[736px] flex-col items-center justify-start gap-6 self-stretch">
-            <div className="flex flex-col relative items-center justify-center gap-2.5 self-stretch rounded-3xl px-[21px] py-8 ">
+            <div className="relative flex flex-col items-center justify-center gap-2.5 self-stretch rounded-3xl px-[21px] py-8 ">
                 <div className="relative h-[600px] w-[300px]  overflow-hidden ">
                     <div data-svg-wrapper className="absolute left-0 top-0">
                     <svg width="300" height="601" viewBox="0 0 300 601" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,9 +81,9 @@ function TicketBooked() {
                                         <div className="font-['Roboto'] text-[10px] font-normal leading-[15px] text-white opacity-30">Enter your name</div>
                                         <div className="font-['Roboto'] text-xs font-bold leading-[18px] text-white">{name}</div>
                                     </div>
-                                    <div className="inline-flex shrink grow basis-0 w-1/2 flex-col items-start justify-center gap-1 p-1">
+                                    <div className="inline-flex w-1/2 shrink grow basis-0 flex-col items-start justify-center gap-1 p-1">
                                         <div className="font-['Roboto'] text-[10px] font-normal leading-[15px] text-white opacity-30">Enter your email *</div>
-                                        <div className="font-['Roboto'] text-xs font-bold leading-[18px] text-white w-full">{email}</div>
+                                        <div className="w-full font-['Roboto'] text-xs font-bold leading-[18px] text-white">{email}</div>
                                     </div>
                                 </div>
                                 <div className="inline-flex items-center justify-start gap-2 self-stretch border-b border-[#12464e]">
@@ -106,7 +106,7 @@ function TicketBooked() {
                 </div>
                 <Barcode />
             </div>
-            <div className="mt-8 w-full inline-flex flex-col-reverse sm:flex-row h-auto items-end justify-end gap-3 sm:gap-6">
+            <div className="mt-8 inline-flex h-auto w-full flex-col-reverse items-end justify-end gap-3 sm:flex-row sm:gap-6">
                 <div className="flex h-12 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg border border-[#23a0b5] px-6 py-3">
                     <button className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-[#23a0b5]" onClick={handleBookTicket}>Book Another Ticket</button>
                 </div>

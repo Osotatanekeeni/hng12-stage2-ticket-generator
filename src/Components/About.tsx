@@ -1,8 +1,7 @@
-import React from "react";
 
 function About() {
   return (
-    <div className="border border-[#0E464F] rounded-2xl w-1/4 p-4 ">
+    <div className="w-1/4 rounded-2xl border border-borderColor p-4 ">
         <div>
             <div className="text-white">
                 <p>Event Ticket Booking UI – Open Source Practice Project 🎟️ </p>

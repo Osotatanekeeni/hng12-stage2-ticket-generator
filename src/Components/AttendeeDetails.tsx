@@ -72,7 +72,7 @@ function AttendeeDetails() {
 
   return (
     <div
-      className="flex w-full sm:w-2/5 flex-col gap-10 overflow-y-auto rounded-3xl border  border-borderColor p-4 sm:p-12 text-white"
+      className="flex w-full flex-col gap-10 overflow-y-auto rounded-3xl border border-borderColor  p-4 text-white sm:w-2/5 sm:p-12"
       style={{ height: "90vh" }}
     >
       <div>
@@ -122,10 +122,10 @@ function AttendeeDetails() {
             ) : (
                 <>
                 <div className="inline-flex h-[200px] items-center   justify-center gap-2.5 self-stretch bg-black/20">
-                <div class=" relative w-60 h-60 border z-20 p-6 bg-black/50 rounded-[32px] flex-col justify-center items-center gap-4 inline-flex" style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                <div className=" relative z-20 inline-flex size-60 flex-col items-center justify-center gap-4 rounded-[32px] border bg-black/50 p-6" style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
             
             
-                <div data-svg-wrapper className="relative z-1 ">
+                <div data-svg-wrapper className="z-1 relative ">
                   <svg
                     width="32"
                     height="32"
@@ -144,17 +144,17 @@ function AttendeeDetails() {
                   </svg>
                   
                 </div>
-                <div className="relative self-stretch z-1 text-center  font-['Roboto'] text-base font-normal leading-normal text-neutral-50">
+                <div className="z-1 relative self-stretch text-center  font-['Roboto'] text-base font-normal leading-normal text-neutral-50">
                   Drag & drop or click to upload
                   
                 </div>
                 
-              <div className="absolute border rounded-[32px] h-full w-full">
+              <div className="absolute size-full rounded-[32px] border">
               {/* <img className="rounded-[32px] h-full w-full" src={imageUrl}></img> */}
               <input
               type="file"
               accept="image/*"
-              className="relative h-full inset-0 cursor-pointer opacity-0"
+              className="relative inset-0 h-full cursor-pointer opacity-0"
               onChange={handleImageUpload} />
               </div>
                 </div>
@@ -245,10 +245,10 @@ function AttendeeDetails() {
           </div>
         </div>
 
-        <div className="mt-8 flex gap-4 flex-col-reverse sm:flex-row">
+        <div className="mt-8 flex flex-col-reverse gap-4 sm:flex-row">
           <button
             type="button"
-            className="font-['JejuMyeongjo'] px-22 w-full rounded-xl border border-teal py-3 text-teal"
+            className="px-22 w-full rounded-xl border border-teal py-3 font-['JejuMyeongjo'] text-teal"
             onClick={handlePrevious}
           >
             Back

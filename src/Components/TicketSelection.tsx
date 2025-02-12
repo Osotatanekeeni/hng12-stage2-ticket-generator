@@ -79,10 +79,10 @@ function TicketSelection() {
     return <AttendeeDetails />;
   }
   return (
-    <div className="flex w-full lg:w-2/5 flex-col gap-10 rounded-3xl border  border-borderColor p-4 lg:p-12 text-white">
+    <div className="flex w-full flex-col gap-10 rounded-3xl border border-borderColor  p-4 text-white lg:w-2/5 lg:p-12">
       <div>
-        <div className="flex flex-col lg:flex-row justify-between">
-          <p className="step-heading text-3xl lg:text-4xl font-light">Ticket Selection</p>
+        <div className="flex flex-col justify-between lg:flex-row">
+          <p className="step-heading text-3xl font-light lg:text-4xl">Ticket Selection</p>
           <p>Step 1/3</p>
         </div>
         <div className="relative mt-4">
@@ -107,9 +107,9 @@ function TicketSelection() {
             Join us for an unforgottable experience at Techember Fest! Secure
             your spot now
           </p>
-          <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row gap-0 lg:gap-6" style={{ fontFamily: "Roboto" }}>
+          <div className="mt-5 flex flex-col gap-0 lg:mt-0 lg:flex-row lg:gap-6" style={{ fontFamily: "Roboto" }}>
             <p>📍04 Rumens road, Ikoyi, Lagos</p>
-            <p className="tracking-widest hidden lg:block">| |</p>
+            <p className="hidden tracking-widest lg:block">| |</p>
             <p>March 15, 2025 | 7:00PM</p>
           </div>
         </div>
@@ -123,9 +123,9 @@ function TicketSelection() {
           Select Ticket Type:
         </div>
         <div className="inline-flex flex-col items-center justify-center gap-4 rounded-3xl border border-[#07363e] bg-[#042127] p-4">
-          <div className="inline-flex items-start flex-col lg:flex-row gap-6 justify-between self-stretch">
+          <div className="inline-flex flex-col items-start justify-between gap-6 self-stretch lg:flex-row">
             <div
-              className={`inline-flex h-[110px] w-full flex-col  items-start justify-start gap-1 overflow-hidden rounded-xl hover:bg-[#2b545a] border-2 border-accessColor ${isRegularTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
+              className={`inline-flex h-[110px] w-full flex-col  items-start justify-start gap-1 overflow-hidden rounded-xl border-2 border-accessColor hover:bg-[#2b545a] ${isRegularTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
               onClick={handleRegularTicket}
             >
               <div className="font-['Roboto'] text-2xl font-semibold leading-relaxed text-white">
@@ -141,7 +141,7 @@ function TicketSelection() {
               </div>
             </div>
             <div
-              className={`inline-flex h-[110px] w-full flex-col  items-start justify-start gap-1 overflow-hidden rounded-xl hover:bg-[#2b545a] border-2 border-accessColor ${isVipTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
+              className={`inline-flex h-[110px] w-full flex-col  items-start justify-start gap-1 overflow-hidden rounded-xl border-2 border-accessColor hover:bg-[#2b545a] ${isVipTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
               onClick={handleVipTicket}
             >
               <div className="font-['Roboto'] text-2xl font-semibold leading-relaxed text-white">
@@ -157,7 +157,7 @@ function TicketSelection() {
               </div>
             </div>
             <div
-              className={`inline-flex h-[110px] w-full flex-col items-start justify-start gap-1 overflow-hidden rounded-xl hover:bg-[#2b545a] border-2 border-accessColor ${isVvipTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
+              className={`inline-flex h-[110px] w-full flex-col items-start justify-start gap-1 overflow-hidden rounded-xl border-2 border-accessColor hover:bg-[#2b545a] ${isVvipTicket ? "border border-accessColor bg-[#12464e]" : "border-2 border-accessColor bg-none"} cursor-pointer p-2`}
               onClick={handleVvipTicket}
             >
               <div className="font-['Roboto'] text-2xl font-semibold leading-relaxed text-white">
@@ -190,7 +190,7 @@ function TicketSelection() {
           </select>
         </div>
 
-        <div className="mt-8 inline-flex flex-col-reverse sm:flex-row h-auto items-end justify-end gap-3 sm:gap-6">
+        <div className="mt-8 inline-flex h-auto flex-col-reverse items-end justify-end gap-3 sm:flex-row sm:gap-6">
           <div className="flex h-12 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg border border-[#23a0b5] px-6 py-3">
             <button className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-[#23a0b5]">
               Cancel
