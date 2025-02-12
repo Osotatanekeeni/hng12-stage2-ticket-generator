@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TicketSelection from "./Components/TicketSelection";
 import { TicketifyContext } from "./Context";
-import BackgroundColorImage from "./assets/Images/BackgroundColorImage.svg"
 import AttendeeDetails from "./Components/AttendeeDetails";
 import TicketBooked from "./Components/TicketBooked";
 import Navigation from "./Components/Navigation";
