@@ -236,7 +236,7 @@ function AttendeeDetails() {
                 })}
                 onChange={(e) => setRequest(e.target.value)}
                 className="rounded-xl border border-borderColor2 bg-transparent p-3 text-white"
-                rows={4}
+                rows={3}
               />
               {errors.request && (
                 <p className="text-red-500">{errors.request.message}</p>
