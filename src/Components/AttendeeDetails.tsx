@@ -72,7 +72,7 @@ function AttendeeDetails() {
 
   return (
     <div
-      className="flex w-2/5 flex-col gap-10 overflow-y-auto rounded-3xl border  border-borderColor p-12 text-white"
+      className="flex w-full sm:w-2/5 flex-col gap-10 overflow-y-auto rounded-3xl border  border-borderColor p-4 sm:p-12 text-white"
       style={{ height: "90vh" }}
     >
       <div>
@@ -86,7 +86,7 @@ function AttendeeDetails() {
         </div>
       </div>
 
-      <div className="inline-flex h-[328px] w-[556px] flex-col items-start justify-start gap-8 rounded-3xl border border-[#07363e] bg-[#042127] px-6 pb-12 pt-6">
+      <div className="inline-flex h-[328px] w-auto flex-col items-start justify-start gap-8 rounded-3xl border border-[#07363e] bg-[#042127] px-6 pb-12 pt-6">
         <div className="text-center font-['Roboto'] text-base font-normal leading-normal text-neutral-50">
           Upload Profile Photo
         </div>
@@ -245,15 +245,15 @@ function AttendeeDetails() {
           </div>
         </div>
 
-        <div className="mt-8 flex gap-4">
+        <div className="mt-8 flex gap-4 flex-col-reverse sm:flex-row">
           <button
             type="button"
-            className="px-22 w-1/2 rounded-xl border border-teal py-3 text-teal"
+            className="font-['JejuMyeongjo'] px-22 w-full rounded-xl border border-teal py-3 text-teal"
             onClick={handlePrevious}
           >
             Back
           </button>
-          <button type="submit" className="px-22 w-1/2 rounded-xl bg-teal py-3">
+          <button type="submit" className="px-22 w-full rounded-xl bg-teal py-3">
             Get My Free Ticket
           </button>
         </div>

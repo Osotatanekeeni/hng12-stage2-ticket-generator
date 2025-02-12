@@ -16,7 +16,7 @@ function App() {
   
   return (
     
-      <div className="flex h-[170vh] sm:h-screen items-center justify-center pt-20 px-4 sm:pt-0" style={{ backgroundImage: `url(${BackgroundColorImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+      <div className="flex sm:h-screen items-center justify-center pt-20 px-4 sm:pt-0" style={{ backgroundImage: `url(${BackgroundColorImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
         
       {step === 1 ? <TicketSelection /> : step === 2 ? <AttendeeDetails /> : step === 3 ? <TicketBooked /> : <TicketSelection />}
     </div>
