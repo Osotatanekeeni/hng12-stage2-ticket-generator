@@ -31,13 +31,13 @@ function TicketBooked() {
         </svg>
         </div>
     </div>
-    <div className="flex h-[849px] flex-col items-center justify-center gap-8 self-stretch">
-        <div className="flex h-[81px] flex-col items-center justify-start gap-4 self-stretch">
+    <div className="flex  flex-col items-center justify-center gap-8 self-stretch">
+        <div className="flex flex-col items-center justify-start gap-4 self-stretch">
             <div className="self-stretch text-center font-['Alatsi'] text-[32px] font-normal text-white">Your Ticket is Booked!</div>
             <div className="self-stretch text-center"><span className="font-['Roboto'] text-base font-normal leading-normal text-neutral-50">Check your email for a copy or you can </span><span className="font-['Roboto'] text-base font-bold leading-normal text-neutral-50">download</span></div>
         </div>
         <div className="flex h-[736px] flex-col items-center justify-start gap-6 self-stretch">
-            <div className="flex h-[664px] flex-col items-center justify-center gap-2.5 self-stretch rounded-3xl px-[21px] py-8 ">
+            <div className="flex flex-col relative items-center justify-center gap-2.5 self-stretch rounded-3xl px-[21px] py-8 ">
                 <div className="relative h-[600px] w-[300px]  overflow-hidden ">
                     <div data-svg-wrapper className="absolute left-0 top-0">
                     <svg width="300" height="601" viewBox="0 0 300 601" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,12 @@ function TicketBooked() {
                         </div>
                     </div>
                 </div>
-                <div className="relative h-[68px] w-[236px]">
+                {/* <div className="absolute border mt-8">
+                    <p>
+                        Where does this one go?
+                    </p>
+                </div> */}
+                <div className="absolute bottom-14 h-[68px] w-[236px]">
                     <div className="absolute left-[1.10px] top-[55.22px] h-[7.67px] w-[6.59px] font-['Inter'] text-xs font-normal text-white">1</div>
                     <div className="absolute -top-0 left-[27.44px] h-[68px] w-[6.59px]">
                         <div data-svg-wrapper className="absolute left-0 top-0">
