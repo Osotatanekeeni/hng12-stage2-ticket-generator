@@ -1,5 +1,14 @@
 
 function About() {
+
+    const handleDesignFileClick = () => {
+        window.location.href = "https://www.figma.com/design/DgO5OBPr0p42DPiIXt0jJn/Event-Ticket-Booking-UI-%E2%80%93-Open-Source-Practice-Project-%F0%9F%8E%9F%EF%B8%8F-(Community)?node-id=11-335&p=f&t=GOE1DyW8liXPByzo-0"; // Replace with your GitHub link for the design file
+      };
+    
+      const handleGithubCodeClick = () => {
+        window.location.href = "https://github.com/Osotatanekeeni/hng12-stage2-ticket-generator"; // Replace with your GitHub link for the code
+      };
+
   return (
     <div className="w-1/4 rounded-2xl border border-borderColor p-4 ">
         <div>
@@ -46,12 +55,12 @@ function About() {
 
       {/* Buttons */}
       <div className="mt-8 inline-flex h-auto w-full flex-col-reverse items-end justify-end gap-3 sm:flex-row sm:gap-6">
-        <div className="flex h-12 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg border border-[#23a0b5] px-6 py-3">
-          <button className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-[#23a0b5]">
+        <div className="flex h-12 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg border border-[#23a0b5] px-6 py-3" onClick={handleDesignFileClick}>
+          <button className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-[#23a0b5]" >
             Design File
           </button>
         </div>
-        <div className="flex h-12 w-full  cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#23a0b5] px-6 py-3">
+        <div className="flex h-12 w-full  cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#23a0b5] px-6 py-3"  onClick={handleGithubCodeClick}>
           <button className="font-['JejuMyeongjo'] text-base font-normal leading-normal text-neutral-50">
             Github Code
           </button>
