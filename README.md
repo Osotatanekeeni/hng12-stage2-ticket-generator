@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Ticketify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ticketify is a beginner-friendly yet practical Event Ticket Booking UI designed for developers to clone, explore, and build upon. The design focuses on a seamless, login-free ticket reservation flow, allowing users to book event tickets quickly and efficiently.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project consists of a three-step ticket booking flow, and developers can extend it further by integrating payment solutions, user authentication (optional), and ticket validation systems.
 
-## Expanding the ESLint configuration
+## Flow & Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1️⃣ Ticket Selection
+- Users can browse available tickets (Free & Paid)
+- Ticket options are displayed in a list or card view.
+- For Free Tickets → Clicking “Get Free Ticket” proceeds to attendee details.
+- For Paid Tickets → Clicking “Purchase Ticket” would ideally open a payment modal.
 
-- Configure the top-level `parserOptions` property like this:
+### 2️⃣ Attendee Details Form
+- Users input their Name, Email, and optional Phone Number
+- Profile picture upload option with preview functionality.
+- Ticket summary is visible to ensure users review their details before submission.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+### 3️⃣ Ticket Booked
+- Users receive a confirmation of their booked ticket.
+- A barcode is generated for the ticket.
+- Users can download the ticket or book another one.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Getting Started
+
+### Prerequisites
+- Node.js
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Osotatanekeeni/hng12-stage2-ticket-generator.git
