@@ -24,7 +24,7 @@ function App() {
   return (
     
     <Router>
-    <main className="" style={{ backgroundImage: `url(${BackgroundColorImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+    <main className="bg-[#041e22]">
       <Navigation />
       <div className="flex items-center justify-center px-4 pt-10 sm:h-screen sm:pt-0">
         <Routes>
