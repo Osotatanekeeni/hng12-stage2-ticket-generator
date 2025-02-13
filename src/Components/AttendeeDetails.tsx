@@ -116,6 +116,14 @@ function AttendeeDetails() {
                 <div className="self-stretch text-center font-['Roboto'] text-base font-normal leading-normal text-neutral-50">
                   Drag & drop or click to upload
                 </div>
+                <div className="absolute size-full rounded-[32px]">
+              {/* <img className="rounded-[32px] h-full w-full" src={imageUrl}></img> */}
+              <input
+              type="file"
+              accept="image/*"
+              className="relative inset-0 h-full cursor-pointer opacity-0"
+              onChange={handleImageUpload} />
+              </div>
                 </div>
           
           </div>
@@ -149,7 +157,7 @@ function AttendeeDetails() {
                   
                 </div>
                 
-              <div className="absolute size-full rounded-[32px] border">
+              <div className="absolute size-full rounded-[32px]">
               {/* <img className="rounded-[32px] h-full w-full" src={imageUrl}></img> */}
               <input
               type="file"
